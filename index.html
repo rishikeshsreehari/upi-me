@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Me - Create Your UPI Donation Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Hero Section -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <a href="#" class="text-4xl font-bold text-gray-800 no-underline">UPI Me</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Landing Section -->
+        <section class="bg-gray-100 py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">Create Your UPI Donation Page</h2>
+                <p class="text-xl text-gray-600 mb-8">Easy, FREE, Safe & Open Source</p>
+                <a href="#generator" class="bg-blue-500 text-white py-3 px-6 rounded-lg text-lg hover:bg-blue-600 transition duration-300">Create Your Page</a>
+            </div>
+        </section>
+
+        <!-- Generator Section -->
+        <section id="generator" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Generate Your UPI Donation Page</h2>
+                <form id="upiForm" class="max-w-md mx-auto space-y-4">
+                    <input type="text" id="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="text" id="upiId" placeholder="Enter UPI ID" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="number" id="amount" placeholder="Amount (optional)" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">Generate Donation Page</button>
+                </form>
+                <div id="errorMessage" class="text-red-500 mt-4 text-center"></div>
+            </div>
+        </section>
+
+        <!-- Disclaimer Section -->
+        <section class="py-10 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Disclaimer</h3>
+                <div class="text-sm text-gray-600">
+                    <p class="mb-2">
+                        The information provided on this website is generated based on user input. While we strive for accuracy, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability of the information, products, services, or related graphics contained on this website. Any reliance you place on such information is strictly at your own risk. In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.
+                    </p>
+                    <p class="mt-2">
+                        Please ensure that you input the correct UPI address and test it before sharing. Do not change any link parameters as it may affect the functionality of the QR code.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600">
+                Built by <a href="https://rishikeshs.com" class="text-blue-500 hover:underline">Rishikesh</a> | 
+                <a href="https://github.com/rishikeshsreehari" class="text-blue-500 hover:underline">GitHub</a> | 
+                <a href="#" class="text-blue-500 hover:underline">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+/* Add any custom styles here */
+.qr-code-container {
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+    display: inline-block;
+}
