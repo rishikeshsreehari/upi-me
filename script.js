@@ -46,7 +46,7 @@ if (document.getElementById('upiForm')) {
         const amount = document.getElementById('amount').value;
         
         if (validateUPIId(upiId)) {
-            let url = `donate?upi_id=${encodeURIComponent(upiId)}&name=${encodeURIComponent(name)}`;
+            let url = `/donate?upi_id=${encodeURIComponent(upiId)}&name=${encodeURIComponent(name)}`;
             if (amount) {
                 url += `&amount=${encodeURIComponent(amount)}`;
             }
