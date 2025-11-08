@@ -4,8 +4,6 @@
 
 A simple, free tool to create a static webpage for accepting UPI payments and donations.
 
-![Screenshot of UPI Me](https://i.imgur.com/your-screenshot-url.png)
-*(Recommended: Add a screenshot of the final `donate.html` page here)*
 
 ## 💡 What is this?
 
@@ -37,7 +35,7 @@ This tool is built with pure HTML, CSS, and JavaScript. There is **no database o
 
 ## 🔗 Live Demo
 
-[**You can try it live here!**](https://your-live-url.com) *(Add your live site URL)*
+[**You can try it live here!**]([https://your-live-url.com](https://upime.com/donate?upi_id=rishikeshsreehari%40okhdfcbank&name=Rishikesh+Sreehari&title=Support+UPI-Me)) 
 
 ## 🛠️ How to Self-Host
 
