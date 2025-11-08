@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPI Me - Create Your UPI Donation Page</title>
+    <title>UPI Me - Create Your UPI Payment Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css"> <script data-goatcounter="https://upime.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
@@ -18,13 +18,46 @@
     <main class="flex-grow">
         <section class="bg-white py-20">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-5xl font-bold text-gray-800 mb-6">Create Your UPI Payment Page</h2>
+                <h2 class="text-5xl font-bold text-gray-800 mb-6">Get Your Sharable UPI Payment Page</h2>
                 <p class="text-xl text-gray-600 mb-8">Easy, FREE, Safe & Open Source</p>
                 <a href="#generator" class="bg-blue-500 text-white py-3 px-6 rounded-lg text-lg hover:bg-blue-600 transition duration-300">Create Your Page</a>
             </div>
         </section>
 
-        <section id="generator" class="py-20 bg-gray-50">
+        <section id="how-it-works" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Get Your Link in 3 Steps</h2>
+                <div class="flex flex-col md:flex-row text-center space-y-8 md:space-y-0 md:space-x-8">
+                    
+                    <div class="flex-1">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-500 text-white rounded-full mx-auto mb-4">
+                            <span class="text-2xl font-bold">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Fill Details</h3>
+                        <p class="text-gray-600">Enter your name, UPI ID, and a custom title for your page.</p>
+                    </div>
+                    
+                    <div class="flex-1">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-500 text-white rounded-full mx-auto mb-4">
+                            <span class="text-2xl font-bold">2</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Get Your Link</h3>
+                        <p class="text-gray-600">Generate a unique, shareable link to your personal payment page.</p>
+                    </div>
+                    
+                    <div class="flex-1">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-500 text-white rounded-full mx-auto mb-4">
+                            <span class="text-2xl font-bold">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Share Anywhere</h3>
+                        <p class="text-gray-600">Share your link on social media, your blog, or anywhere else!</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="generator" class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Generate Your UPI Page</h2>
                 <form id="upiForm" class="max-w-md mx-auto space-y-4">
@@ -32,13 +65,13 @@
                     <input type="text" id="upiId" placeholder="your.upi.id@bank" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <input type="text" id="pageTitle" placeholder="Custom Title (e.g., Pay for Coffee)" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <input type="number" id="amount" placeholder="Default Amount (optional)" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">Generate Page</Lbutton>
+                    <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">Generate Page</button>
                 </form>
                 <div id="errorMessage" class="text-red-500 mt-4 text-center font-medium"></div>
             </div>
         </section>
         
-        <section id="result" class="pb-20 bg-gray-50" style="display: none;">
+        <section id="result" class="pb-20 bg-white" style="display: none;">
             <div class="container mx-auto px-4">
                 <div class="max-w-md mx-auto space-y-4">
                     <h3 class="text-2xl font-bold text-gray-800 text-center">Your Page is Ready!</h3>
@@ -54,7 +87,7 @@
             </div>
         </section>
 
-        <section class="py-10 bg-white">
+        <section class="py-10 bg-gray-50">
             <div class="container mx-auto px-4 max-w-3xl">
                 <h3 class="text-2xl font-bold text-gray-800 mb-4">Disclaimer</h3>
                 <div class="text-sm text-gray-600">
@@ -73,8 +106,8 @@
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-600">
                 Built by <a href="https://rishikeshs.com" class="text-blue-500 hover:underline">Rishikesh</a> | 
-                <a href="https://github.com/rishikeshsreehari" class="text-blue-500 hover:underline">GitHub</a> | 
-                <a href="https://upime.com/donate?upi_id=rishikeshsreehari%40okhdfcbank&name=Rishikesh%20Sreehari" class="text-blue-500 hover:underline">Support the Project</a>
+                <a href="https://github.com/rishikeshsreehari/upi-me" class="text-blue-500 hover:underline">GitHub</a> | 
+                <a href="https://upime.com/donate?upi_id=rishikeshsreehari%40okhdfcbank&name=Rishikesh+Sreehari&title=Support+UPI-Me" class="text-blue-500 hover:underline">Support the Project</a>
             </p>
         </div>
     </footer>

@@ -88,7 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Note: Using '/donate' assumes a server setup. 
             // If these are just static files, change '/donate' to 'donate.html'
             const pageUrl = `/donate?${params.toString()}`;
+            // Use this line if you are not running a server:
+            // const pageUrl = `donate.html?${params.toString()}`; 
+            
             const fullUrl = `${window.location.origin}${pageUrl}`;
+            // Use this line if you are not running a server:
+            // const fullUrl = `${window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1)}${pageUrl}`;
+
 
             // Show result section
             const resultSection = document.getElementById('result');
@@ -123,12 +129,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = urlParams.get('title'); // Get the new custom title
 
         if (upiId && name) {
-            // 1. Set Page Title
+            // 1. Set Page Title (Backward Compatible)
             const pageTitleEl = document.getElementById('pageTitle');
             if (title) {
-                pageTitleEl.textContent = title;
+                pageTitleEl.textContent = title; // Use new custom title
             } else {
-                pageTitleEl.textContent = `Pay ${name}`; // Default fallback
+                pageTitleEl.textContent = `Donate to ${name}`; // Fallback for old links
             }
 
             // 2. Set Amount Display
@@ -139,18 +145,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 amountDisplayEl.textContent = `Paying to: ${name}`;
             }
 
-            // 3. Build UPI String
+            // 3. Set Visible UPI ID
+            document.getElementById('upiIdText').textContent = upiId;
+
+            // 4. Build UPI String
             let upiString = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${encodeURIComponent(name)}&cu=INR`;
             if (amount) {
                 upiString += `&am=${encodeURIComponent(amount)}`;
             }
-            // You could add your `&tn=Donation` here if you like:
-            // upiString += "&tn=Payment via UPI Me";
 
-            // 4. Generate QR
+            // 5. Generate QR
             generateQR(upiString);
 
-            // 5. Wire up buttons
+            // 6. Wire up buttons
             document.getElementById('openUpiAppBtn').href = upiString;
             document.getElementById('downloadBtn').addEventListener('click', downloadQR);
             
